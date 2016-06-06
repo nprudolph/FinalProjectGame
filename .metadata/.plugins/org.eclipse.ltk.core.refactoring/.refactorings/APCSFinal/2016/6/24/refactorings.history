@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;APCSFinal.Cell&apos; to &apos;CellTile&apos;&#x0D;&#x0A;- Original project: &apos;APCSFinal&apos;&#x0D;&#x0A;- Original element: &apos;APCSFinal.Cell&apos;&#x0D;&#x0A;- Renamed element: &apos;APCSFinal.CellTile&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Cell&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;APCSFinal{Cell.java[Cell" matchStrategy="1" name="CellTile" qualified="false" references="true" similarDeclarations="false" stamp="1465235899416" textual="false" version="1.0"/>
+</session>

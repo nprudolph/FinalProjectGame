@@ -139,11 +139,11 @@ public class TGGui extends JPanel {
                         @Override
                         public void keyPressed(KeyEvent e) {
                                 int key = e.getKeyCode();
-                                switch(key) {
+                                /*switch(key) {
                                 case KeyEvent.VK_ESCAPE:
                                         TileRunner.gui.dispose();
                                         break;
-                                default:
+                                default:*/
                                         game.keyPressed(key);
                                         repaint();
                                         if(game.isCorrect()) {
@@ -155,7 +155,7 @@ public class TGGui extends JPanel {
                                                 LEVEL += 10;
                                                 game = new TileGame(SIDE, LEVEL);
                                                 repaint();
-                                        }
+                                        //}
                                 }
                         }
                 });

@@ -22,8 +22,8 @@ public class TileRunner {
                                 gui.setUndecorated(true);
                                 gui.setSize(WIDTH, HEIGHT);
                                
-                                TGGui spp = new TGGui();
-                                gui.add(spp);
+                                TGGui tilo = new TGGui();
+                                gui.add(tilo);
                                
                                 gui.setVisible(true);
                         }

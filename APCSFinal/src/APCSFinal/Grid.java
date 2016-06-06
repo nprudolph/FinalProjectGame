@@ -6,14 +6,14 @@ package APCSFinal;
 //Class -
 //Lab  -
 
-import java.awt.Graphics;
-import Cell;
+import java.awt.Graphics; 
+
 import java.awt.Color;
 import java.awt.Font;
 
 public class Grid
 {
-	
+	private CellTile[][] grid;
 	
 	public Grid()
 	{
@@ -22,23 +22,23 @@ public class Grid
 
 	public Grid(int rows, int cols)
 	{
-		grid = new Cell[rows][cols];
+		grid = new CellTile[rows][cols];
 
 	}
 
 	public void setSize(int rows, int cols)
 	{
-		grid = new Cell[rows][cols];
+		grid = new CellTile[rows][cols];
 
 	}
 
-	public void setSpot(int row,int col, Cell val)
+	public void setSpot(int row,int col, CellTile val)
 	{
 		grid[row][col]=val;
 
 	}
 	
-	public Cell getSpot(int row, int col)
+	public CellTile getSpot(int row, int col)
 	{
 		return grid[row][col];
 	}
