@@ -14,25 +14,25 @@ public abstract class CellTile
 {
 	private int xPos;
 	private int yPos;
-	private int width;
-	private int height;
+	//private int width;
+	//private int height;
 
 	public CellTile()
 	{
 		setPos(5,5);
-		setWidth(5);
-		setHeight(5);
+		//setWidth(5);
+		//setHeight(5);
 	}
 
 	public CellTile(int x, int y)
 	{
 		xPos=x;
 		yPos=y;
-		height=5;
-		width=5;
+		//height=5;
+		//width=5;
 	}
 
-	public CellTile(int x, int y, int w, int h)
+	/*public CellTile(int x, int y, int w, int h)
 	{
 		xPos=x;
 		yPos=y;
@@ -40,7 +40,7 @@ public abstract class CellTile
 		height=h;
 
 
-	}
+	}*/
 
 	public void setPos(int x, int y)
 	{
@@ -62,7 +62,7 @@ public abstract class CellTile
 
 	}
 
-	public void setWidth(int w)
+	/*public void setWidth(int w)
 	{
 		width=w;
 
@@ -72,7 +72,7 @@ public abstract class CellTile
 	{
 		height=h;
 
-	}
+	}*/
 	
 	public int getX()
 	{
@@ -84,7 +84,7 @@ public abstract class CellTile
 		return yPos;
 	}	
 
-	public int getWidth()
+	/*public int getWidth()
 	{
 		return width;
 	}	
@@ -92,12 +92,12 @@ public abstract class CellTile
 	public int getHeight()
 	{
 		return height;
-	}
+	}*/
 	
 	public abstract void draw(Graphics window);
 	
 	public String toString()
 	{
-		return getX() + " " + getY() + " " + getWidth() + " " + getHeight();
+		return getX() + " " + getY() /*+ " " + getWidth() + " " + getHeight()*/;
 	}
 }

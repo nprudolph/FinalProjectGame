@@ -38,9 +38,16 @@ public class Grid
 
 	}
 	
-	public CellTile getSpot(int row, int col)
+	/*public CellTile getSpot(int row, int col)
 	{
 		return grid[row][col];
+	}*/
+	
+	public int getSpot(int col, int row) {
+        if(col >= 0  && col <= width - 1 && row >= 0 && row <= width-1) {
+                return grid[col][row];
+        }
+        return 0;
 	}
 	
 	public int getNumRows()
