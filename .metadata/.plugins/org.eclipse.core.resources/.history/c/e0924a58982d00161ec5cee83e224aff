@@ -26,32 +26,58 @@ public class TileGame {
                 board[width - 1][width - 1] = 0;
                 gridX = width - 1;
                 gridY = width - 1;
-                //keeps
                 outofbounds = 2;
                
                 shuffle();
         }
        
         private void shuffle() {
-                Random rand = new Random();
+                Random random = new Random();
                 for(int i=0;i < difficulty;i++) {
-                        int t = rand.nextInt(4);
-                        if(t==1){
+                        int v = random.nextInt(4);
+                        
+                        if(v==1){
                         	up();
                         }
-                        else if(t==2){
+                        else if(v==2){
                         	down();
                         }
-                        else if(t==3){
+                        else if(v==3){
                         	left();
                         }
-                        else if(t==4){
+                        else if(v==4){
                         	right();
-                        }       
+                        }
+                        
+                        /*switch(v) {
+                        case 1:
+                                if(up() && outofbounds != 1) {
+                                        i++;
+                                        outofbounds = 2;
+                                }
+                                break;
+                        case 2:
+                                if(down() && outofbounds != 2) {
+                                        i++;
+                                        outofbounds = 1;
+                                }
+                                break;
+                        case 3:
+                                if(left() && outofbounds != 3) {
+                                        i++;
+                                        outofbounds = 4;
+                                }
+                                break;
+                        case 4:
+                                if(right() && outofbounds != 4) {
+                                        i++;
+                                        outofbounds = 3;
+                                }
+                                break;
+                        }*/
                 }
         }
        
-        //move empty tile in each direction
         private boolean up() {
                 if(gridY > 0) {
                         board[gridX][gridY] = board[gridX][gridY - 1];
@@ -93,37 +119,36 @@ public class TileGame {
                 int ctr = 1;
                 for(int i = 0; i < width; i++) {
                         for(int j = 0; j < width; j++) {
-                                if(board[j][i] == ctr++ || (i == width - 1 && j == width - 1)){
+                                if(board[j][i] == ctr++ || (i == width - 1 && j == width - 1))
                                         continue;
-                                }
-                                else{
-                                	return false;
-                            }
-                    }
-            }
+                                else
+                                        return false;
+                        }
+                }
                 return true;
         }
        
         public int getSpot(int x, int y) {
-        	if(x >= 0  && x <= width - 1 && y >= 0 && y <= width-1) {
-        		return board[x][y];
-            }
-            return 0;
+                if(x >= 0  && x <= width - 1 && y >= 0 && y <= width-1) {
+                        return board[x][y];
+                }
+                return 0;
         }
        
         public void keyPressed(int key) {
-                
-                if(key==KeyEvent.VK_UP){
+                switch(key) {
+                case KeyEvent.VK_UP:
                         up();
-                }
-                else if(key==KeyEvent.VK_DOWN){
+                        break;
+                case KeyEvent.VK_DOWN:
                         down();
-                }
-                else if(key==KeyEvent.VK_LEFT){
+                        break;
+                case KeyEvent.VK_LEFT:
                         left();
-        		}
-                else if(key==KeyEvent.VK_RIGHT){
+                        break;
+                case KeyEvent.VK_RIGHT:
                         right();
+                        break;
                 }
         }
 }
